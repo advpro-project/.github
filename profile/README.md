@@ -28,13 +28,13 @@ Kelompok A6:
 ## Current Diagram
 ### Context Diagram
 
-![Context Diagram](../image/1_context.jpg)
+![Context Diagram](image/1_context.jpg)
 
 Untuk mengakses aplikasi kami, pengguna melakukan autentikasi terlebih dahulu. Pengguna yang belum melakukan registrasi dapat mendaftarkan sebagai pembeli atau admin. Jika pengguna sudah punya akun, pengguna hanya perlu melakukan login saja.
 
 ### Container Diagram
 
-![Container Diagram](../image/2_container.jpg)
+![Container Diagram](image/2_container.jpg)
 
 Aplikasi kami terdiri dari beberapa _container_ yang saling berinteraksi satu sama lain. _Container_ yang ada di dalam aplikasi kami adalah:
 - Autentikasi
@@ -44,7 +44,7 @@ Aplikasi kami terdiri dari beberapa _container_ yang saling berinteraksi satu sa
 
 ### Deployment Diagram
 
-![Deployment Diagram](../image/3_deployment.jpg)
+![Deployment Diagram](image/3_deployment.jpg)
 
 Deployment aplikasi menggunakan Google Cloud Platform pada _backend_. Setiap _container_ di-_deploy_ di _virtual machine_ yang berbeda-beda. Tidak hanya itu, setiap _container_ juga memiliki _database_ yang berbeda-beda. Setiap _database_ kami _deploy_ melalui Supbase. Untuk _deploy_ _frontend_, kami menggunakan Vercel.
 
