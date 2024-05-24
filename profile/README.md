@@ -73,6 +73,10 @@ Ketergantungan pada _Third Party_ | Sedang | Rendah | 6              |
 ### Mitigasi
 Karena menurut kami yang paling berdampak adalah keamanan pada transaksi data, kami akan fokus pada mitigasi risiko tersebut. Kami akan melakukan enkripsi data sensitif pengguna dan transaksi menggunakan _end-to-end encryption_.
 
+## Kenapa Risk Storming?
+
+Risk storming membantu kami untuk mengidentifikasi risiko-risiko yang mungkin terjadi pada aplikasi kami. Dengan mengetahui risiko-risiko tersebut, kami dapat mempersiapkan diri dan merencanakan mitigasi yang tepat.
+
 ---
 
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
