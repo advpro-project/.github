@@ -25,13 +25,14 @@ Kelompok A6:
 - Front End: https://github.com/advpro-project/home-furniture-fe
 
 # Modul 12: Software Architecture
-## Context Diagram
+## Current Diagram
+### Context Diagram
 
 ![Context Diagram](../image/1_context.jpg)
 
 Untuk mengakses aplikasi kami, pengguna melakukan autentikasi terlebih dahulu. Pengguna yang belum melakukan registrasi dapat mendaftarkan sebagai pembeli atau admin. Jika pengguna sudah punya akun, pengguna hanya perlu melakukan login saja.
 
-## Container Diagram
+### Container Diagram
 
 ![Container Diagram](../image/2_container.jpg)
 
@@ -41,11 +42,36 @@ Aplikasi kami terdiri dari beberapa _container_ yang saling berinteraksi satu sa
 - CRU Delivery
 - Transaksi Pembelian Produk
 
-## Deployment Diagram
+### Deployment Diagram
 
 ![Deployment Diagram](../image/3_deployment.jpg)
 
 Deployment aplikasi menggunakan Google Cloud Platform pada _backend_. Setiap _container_ di-_deploy_ di _virtual machine_ yang berbeda-beda. Tidak hanya itu, setiap _container_ juga memiliki _database_ yang berbeda-beda. Setiap _database_ kami _deploy_ melalui Supbase. Untuk _deploy_ _frontend_, kami menggunakan Vercel.
+
+## Future Architecture
+Berikut adalah hasil diskusi menggunakan metode _risk storming_.
+
+### Identifikasi Risiko
+1. Keamanan pada Transaksi Data
+Data sensitif pengguna dan transaksi dapat menjadi rentan terhadap kebocoran atau serangan.
+
+2. Banyaknya Microservice
+Mengelola dan mengoperasikan banyak microservices dapat menjadi sangat rumit bagi kami.
+
+3. Ketergantungan pada _Third Party_
+Aplikasi menggunakan layanan _third party_ seperti Supabase, Vercel, dan GCP. Jika salah satu layanan tersebut mengalami _downtime_, aplikasi kami juga akan terdampak.
+
+### Konsensus
+
+Risiko | Dampak | Kemungkinan | Penilaian Kami |
+-- |--------| -- |----------------|
+Keamanan pada Transaksi Data | Tinggi | Tinggi | 9              |
+Banyaknya Microservice | Sedang | Sedang | 7              |
+Ketergantungan pada _Third Party_ | Sedang | Rendah | 6              |
+
+
+### Mitigasi
+Karena menurut kami yang paling berdampak adalah keamanan pada transaksi data, kami akan fokus pada mitigasi risiko tersebut. Kami akan melakukan enkripsi data sensitif pengguna dan transaksi menggunakan _end-to-end encryption_.
 
 ---
 
